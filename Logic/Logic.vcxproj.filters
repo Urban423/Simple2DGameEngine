@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="Object.h">
+      <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Verticle.h">
+      <Filter>Verticle</Filter>
+    </ClInclude>
+    <ClInclude Include="Point.h">
+      <Filter>Point</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Object.cpp">
+      <Filter>Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Verticle.cpp">
+      <Filter>Verticle</Filter>
+    </ClCompile>
+    <ClCompile Include="Point.cpp">
+      <Filter>Point</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Object">
+      <UniqueIdentifier>{591db4df-ddb2-42bc-8732-09f00b6c895e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Verticle">
+      <UniqueIdentifier>{a81a6b04-99ec-4393-9cee-6a853b0af730}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Point">
+      <UniqueIdentifier>{0f631982-ad38-42c5-b178-781c5ec06fbf}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
