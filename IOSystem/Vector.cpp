@@ -9,6 +9,14 @@ Vector Vector::Cross(Vector a, Vector b)
 	);
 }
 
+float Vector::MagnitudeDistance(Vector a, Vector b)
+{
+	float x = a.x - b.x;
+	float y = a.y - b.y;
+	float z = a.z - b.z;
+	return x * x + y * y + z * z;
+}
+
 Vector::Vector(double x, double y, double z)
 {
 	this->x = x;

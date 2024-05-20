@@ -10,6 +10,7 @@ public:
 	double z;
 public:
 	static Vector Cross(Vector a, Vector b);
+	static float MagnitudeDistance(Vector a, Vector b);
 public:
 	Vector() {};
 	Vector(double x, double y, double z);

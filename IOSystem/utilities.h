@@ -56,7 +56,7 @@ char GetKeyDown(char key_code);
 char GetKeyUp(char key_code);
 
 
-struct mesh
+struct Mesh
 {
 	int* indicies;
 	int indicies_size;
@@ -66,4 +66,10 @@ struct mesh
 
 	Vector* normals;
 	Vector* vertexs_copy;
+
+	int* uv_indicies;
+	Vector* uv_coords;
+	int uv_size;
+
+	int* materials;
 };

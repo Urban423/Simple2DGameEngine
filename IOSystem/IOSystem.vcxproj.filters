@@ -11,7 +11,31 @@
     <ClInclude Include="Window.h">
       <Filter>Window</Filter>
     </ClInclude>
-    <ClInclude Include="MapleLeaf.h">
+    <ClInclude Include="2dFileReader.h">
+      <Filter>Window</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphicEngine.h">
+      <Filter>Window</Filter>
+    </ClInclude>
+    <ClInclude Include="Matrix4x4.h">
+      <Filter>Window</Filter>
+    </ClInclude>
+    <ClInclude Include="Rect.h">
+      <Filter>Window</Filter>
+    </ClInclude>
+    <ClInclude Include="Triangle.h">
+      <Filter>Window</Filter>
+    </ClInclude>
+    <ClInclude Include="utilities.h">
+      <Filter>Window</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector.h">
+      <Filter>Window</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector2.h">
+      <Filter>Window</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector4.h">
       <Filter>Window</Filter>
     </ClInclude>
   </ItemGroup>
@@ -19,5 +43,14 @@
     <ClCompile Include="Window.cpp">
       <Filter>Window</Filter>
     </ClCompile>
+    <ClCompile Include="2dFileReader.cpp" />
+    <ClCompile Include="GraphicEngine.cpp" />
+    <ClCompile Include="Matrix4x4.cpp" />
+    <ClCompile Include="Rect.cpp" />
+    <ClCompile Include="Triangle.cpp" />
+    <ClCompile Include="utilities.cpp" />
+    <ClCompile Include="Vector.cpp" />
+    <ClCompile Include="Vector2.cpp" />
+    <ClCompile Include="Vector4.cpp" />
   </ItemGroup>
 </Project>

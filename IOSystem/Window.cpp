@@ -4,6 +4,14 @@
 
 Window::Window()
 {
+	Window::init("Window", 12, 12, false);
+	r = Window::getInnerSize();
+	image = new int[r.width * r.height];
+	Matrix4x4 proj;
+	proj.setIdentity();
+	proj.setOrthoLH(r.width, r.height, 0.01f, 8);
+	setKeyBoard((char*)Window::keyBoarState, (char*)Window::oldkeyBoarState);
+	initGraphic(image, r.width, r.height, proj);
 }
 
 Window::~Window()
@@ -16,7 +24,7 @@ void Window::init(const char* windowName, int width, int height, bool fullscreen
 
 	RECT rc = { 0, 0, width, height };
 	_hwnd = GetConsoleWindow();
-
+	
 	GetClientRect(_hwnd, &rc);
 	width = rc.right - rc.left;
 	height = rc.bottom - rc.top;
@@ -58,7 +66,7 @@ void Window::setBuffer(int* image)
 	SetBitmapBits(memBitmap, height * 4 * width, image);
 	HDC src = CreateCompatibleDC(hdc);
 	SelectObject(src, memBitmap);
-	BitBlt(hdc, 0, 0, width, height, src, 0, 0, SRCCOPY);
+	BitBlt(hdc, 0, 0, width, height, src, 0, -0, SRCCOPY);
 	DeleteDC(src);
 	ReleaseDC(_hwnd, hdc);
 }
@@ -83,11 +91,8 @@ Rect Window::getCenter()
 
 Rect Window::getInnerSize()
 {
-	HWND myconsole = GetConsoleWindow();
-	HDC mydc = GetDC(myconsole);
 	RECT rc;
-	GetClientRect(myconsole, &rc);
-
+	GetClientRect(_hwnd, &rc);
 	width = rc.right - rc.left;
 	height = rc.bottom - rc.top;
 	left = rc.left;

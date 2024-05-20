@@ -1,5 +1,11 @@
 #pragma once
 #include <Windows.h>
+
+#include "Vector.h"
+#include "utilities.h"
+#include "Matrix4x4.h"
+#include "GraphicEngine.h"
+#include "2dFileReader.h"
 #include "Rect.h"
 
 typedef BOOL (WINAPI * PFNWGLSWAPINTERVALEXTPROC)(int);
@@ -35,6 +41,8 @@ public:
 	virtual void onFocus();
 	virtual void onKillFocus();
 protected:
+	int* image;
+	Rect r;
 
 	unsigned char keyBoarState[256];
 	unsigned char oldkeyBoarState[256];

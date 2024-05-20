@@ -30,26 +30,26 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -132,27 +132,27 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="App.cpp" />
+    <ClCompile Include="DuctTape.cpp" />
+    <ClCompile Include="Object.cpp" />
+    <ClCompile Include="Knife.cpp" />
+    <ClCompile Include="Location.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MapleLeafBroken.cpp" />
+    <ClCompile Include="Point.cpp" />
+    <ClCompile Include="Scissors.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="ManifestWindows.rc" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\App\App.vcxproj">
-      <Project>{03b4ff95-094b-45a9-a9db-b124ee67874e}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\GraphicEngine\GraphicEngine.vcxproj">
-      <Project>{a0f8f09f-e2ec-4d75-9639-c81ac85a8dbb}</Project>
-    </ProjectReference>
     <ProjectReference Include="..\IOSystem\IOSystem.vcxproj">
       <Project>{493c691a-b0e5-4c23-9457-5a5df71cf7c3}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\Logic\Logic.vcxproj">
-      <Project>{4b4c9523-b11d-4b9f-8b47-2e2246623d69}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\Math\Math.vcxproj">
-      <Project>{f4e6119f-0f1c-4cdd-a817-1ca8e21e62af}</Project>
-    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="App.h" />
+    <ClInclude Include="Location.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
