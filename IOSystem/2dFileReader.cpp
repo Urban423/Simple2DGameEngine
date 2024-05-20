@@ -1,7 +1,7 @@
 #include "2dFileReader.h"
 #include <stdio.h>
 
-Mesh read2dModel(const char* filename)
+Mesh loadResourse(const char* filename)
 {
 	float x, y, z;
 	Mesh result;

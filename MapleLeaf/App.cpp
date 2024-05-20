@@ -8,30 +8,37 @@ bool App::isRunning() { return _running; }
 
 void App::onCreate()
 {
-	initMesh(0, read2dModel("mapleLeaf.3ds"));
-	initMesh(1, read2dModel("knife.3ds"));
-	initMesh(2, read2dModel("ductTape.3ds"));
-	initMesh(3, read2dModel("scissors.3ds"));
-	initMesh(4, read2dModel("mapleLeafSeparated.3ds"));
-	initMesh(5, read2dModel("ductTape.3ds"));
+	registerMesh(0, loadResourse("mapleLeaf.3ds"));
+	registerMesh(1, loadResourse("knife.3ds"));
+	registerMesh(2, loadResourse("stone.3ds"));
+	registerMesh(3, loadResourse("scissors.3ds"));
+	registerMesh(4, loadResourse("mapleLeafSeparated.3ds"));
+	registerMesh(5, loadResourse("ductTape.3ds"));
+	registerMesh(6, loadResourse("brokenStone.3ds"));
+	registerMesh(7, loadResourse("brokenScissros.3ds"));
+	registerMesh(8, loadResourse("brokenKnife.3ds"));
 
 
 	objects[0] = new MapleLeaf();
 	objects[1] = new Knife();
 	objects[2] = new Scissors();
 	objects[3] = new DuctTape();
+	objects[4] = new Stone();
 }
 
 void App::onUpdate()
 {
-	int matrix[6][6] = {
-		//maple leaf	knife		ductTape	scissors	mapleLeafB		ductTape
-		{do_nothing,	do_break,	do_repair,	do_break,	do_nothing,		do_nothing	},	//mapleLeaf
-		{do_break,		do_nothing, do_nothing, do_nothing, do_nothing,		do_nothing	},	//knife
-		{do_repair,		do_nothing, do_nothing, do_nothing, do_repair,		do_nothing	},	//ductTape
-		{do_break,		do_nothing, do_nothing, do_nothing, do_nothing,		do_nothing	},	//scissors
-		{do_nothing,	do_nothing, do_repair,	do_nothing, do_nothing,		do_repair	},	//mapleLeafB
-		{do_repair,		do_nothing, do_nothing, do_nothing, do_repair,		do_nothing	},	//ductTape
+	int matrix[9][9] = {
+		//maple leaf	knife		stone		scissors	mapleLeafB		ductTape	brokenStone	brokenKnife	brokenScissors
+		{do_nothing,	do_break,	do_nothing,	do_break,	do_nothing,		do_repair,	do_nothing,	do_nothing,	do_nothing	},	//mapleLeaf
+		{do_nothing,	do_nothing, do_break,	do_nothing, do_nothing,		do_repair,	do_nothing,	do_nothing,	do_nothing	},	//knife
+		{do_break,		do_nothing, do_nothing,	do_nothing, do_nothing,		do_repair,	do_nothing,	do_nothing,	do_nothing	},	//stone
+		{do_nothing,	do_nothing, do_break,	do_nothing, do_nothing,		do_repair,	do_nothing,	do_nothing,	do_nothing	},	//scissors
+		{do_nothing,	do_nothing, do_nothing,	do_nothing, do_nothing,		do_repair,	do_nothing,	do_nothing,	do_nothing	},	//mapleLeafB
+		{do_nothing,	do_nothing, do_nothing, do_nothing, do_nothing,		do_repair,	do_nothing,	do_nothing,	do_nothing	},	//ductTape
+		{do_nothing,	do_nothing, do_nothing, do_nothing, do_nothing,		do_repair,	do_nothing,	do_nothing,	do_nothing	},	//brokenStone
+		{do_nothing,	do_nothing, do_nothing, do_nothing, do_nothing,		do_repair,	do_nothing,	do_nothing,	do_nothing	},	//brokenknife
+		{do_nothing,	do_nothing, do_nothing, do_nothing, do_nothing,		do_repair,	do_nothing,	do_nothing,	do_nothing	},	//brokenScissors
 	}; 
 	
 	for (int i = 0; i < size - 1; i++) {

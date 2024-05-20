@@ -73,7 +73,7 @@ void drawMesh(int mesh_index, float rot, float x, float y, int* colors)
 	}
 }
 
-void initMesh(int index, Mesh mesh)
+void registerMesh(int index, Mesh mesh)
 {
 	meshes[index] = mesh;
 }

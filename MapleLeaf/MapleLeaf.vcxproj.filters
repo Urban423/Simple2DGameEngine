@@ -26,6 +26,9 @@
     <ClCompile Include="MapleLeafBroken.cpp">
       <Filter>Logic</Filter>
     </ClCompile>
+    <ClCompile Include="Stone.cpp">
+      <Filter>Logic</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="ManifestWindows.rc" />

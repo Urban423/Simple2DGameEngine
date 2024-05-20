@@ -39,7 +39,6 @@ public:
 class Object: public Point
 {
 public:
-	bool skip = false;
 	int index = 0;
 	bool drawCountor = 1;
 	unsigned char up    = KeyCode_UpArrrow;
@@ -85,6 +84,17 @@ public:
 	void hide();
 };
 
+class Stone : public Object
+{
+public:
+	Stone();
+	~Stone(); 
+	
+	void doSomething(int action, Object& obj);
+	void show();
+	void hide();
+};
+
 class DuctTape : public Object
 {
 public:
@@ -102,6 +112,7 @@ protected:
 public:
 	Knife();
 	~Knife();
+	void doSomething(int action, Object& obj);
 
 	void show();
 	void hide();
@@ -113,6 +124,7 @@ class Scissors: public Knife
 public:
 	Scissors();
 	~Scissors();
+	void doSomething(int action, Object& obj);
 
 	void show();
 	void hide();

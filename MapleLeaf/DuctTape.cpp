@@ -2,12 +2,12 @@
 
 int ductTape_colors[] = {
 	0xFF'CC'CC'CC,
-	0xFF'AA'AA'AA,
-	0xFF'00'00'FF,
 	0xFF'FF'FF'FF,
+	0xFF'00'00'FF,
+	0xFF'AA'AA'AA,
 };
 
-DuctTape::DuctTape() { index = 5; colors = ductTape_colors; skip = 1; x = -12; }
+DuctTape::DuctTape() { index = 5; colors = ductTape_colors; x = -12; }
 
 DuctTape::~DuctTape() {}
 

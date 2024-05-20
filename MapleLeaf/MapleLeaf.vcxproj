@@ -141,6 +141,7 @@
     <ClCompile Include="MapleLeafBroken.cpp" />
     <ClCompile Include="Point.cpp" />
     <ClCompile Include="Scissors.cpp" />
+    <ClCompile Include="Stone.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="ManifestWindows.rc" />

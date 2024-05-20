@@ -9,7 +9,6 @@ int knife_colors[] = {
 Knife::Knife() 
 {
 	index = 4; x = 12; y = 12; rotation = -0.6f;
-	skip = true;
 	index = 1;
 	this->colors = knife_colors; 
 }
@@ -26,4 +25,16 @@ void Knife::hide()
 {
 	visible = false;
 	drawMesh(index, 1.1, x, y, ConsoleColor);
+}
+
+void Knife::doSomething(int action, Object& obj)
+{
+	if (action == do_repair)
+	{
+		index = 1;
+	}
+	else if (action == do_break)
+	{
+		index = 8;
+	}
 }
