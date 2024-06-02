@@ -19,11 +19,12 @@ void App::onCreate()
 	registerMesh(8, loadResourse("brokenKnife.3ds"));
 
 
+	size = 4;
 	objects[0] = new MapleLeaf();
-	objects[1] = new Knife();
-	objects[2] = new Scissors();
-	objects[3] = new DuctTape();
-	objects[4] = new Stone();
+	objects[1] = new Scissors();
+	objects[2] = new DuctTape();
+	objects[3] = new Stone();
+	//objects[4] = new Knife();
 }
 
 void App::onUpdate()

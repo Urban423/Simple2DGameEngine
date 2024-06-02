@@ -22,3 +22,5 @@ void DuctTape::hide()
 	visible = false;
 	drawMesh(index, 0, x, y, ConsoleColor);
 }
+
+void DuctTape::doSomething(int action, Object& obj){}

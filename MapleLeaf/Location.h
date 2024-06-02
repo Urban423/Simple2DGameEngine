@@ -53,7 +53,7 @@ public:
 	Object();
 	~Object();
 
-	virtual void doSomething(int action, Object& obj);
+	virtual void doSomething(int action, Object& obj) = 0;
 	void show();
 	void hide();
 	int* getColors();
@@ -61,8 +61,15 @@ public:
 	void Update();
 };
 
+class ConcreateObjectInterface
+{
+public:
+	virtual void doSomething(int action, Object& obj) = 0;
+	virtual void show() = 0;
+	virtual void hide() = 0;
+};
 
-class MapleLeaf: public Object
+class MapleLeaf: public Object, public ConcreateObjectInterface
 {
 public:
 	MapleLeaf();
@@ -84,7 +91,7 @@ public:
 	void hide();
 };
 
-class Stone : public Object
+class Stone : public Object, public ConcreateObjectInterface
 {
 public:
 	Stone();
@@ -95,7 +102,7 @@ public:
 	void hide();
 };
 
-class DuctTape : public Object
+class DuctTape : public Object, public ConcreateObjectInterface
 {
 public:
 	DuctTape();
@@ -103,9 +110,10 @@ public:
 
 	void show();
 	void hide();
+	void doSomething(int action, Object& obj);
 };
 
-class Knife: public Object
+class Knife: public Object, public ConcreateObjectInterface
 {
 protected:
 	float sharp = 1.3;
