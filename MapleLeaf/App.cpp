@@ -57,7 +57,7 @@ void App::onUpdate()
 	memset(image, 0, r.height * r.width * 4);
 	for (int i = 0; i < size; i++) 	{
 		if (objects[i]->getVisibility()) {
-			drawMesh(objects[i]->index, objects[i]->rotation, objects[i]->getX(), objects[i]->getY(), objects[i]->getColors());
+			DrawPolygons(objects[i]->index, objects[i]->rotation, objects[i]->getX(), objects[i]->getY(), objects[i]->getColors());
 		}
 	}
 

@@ -1,7 +1,7 @@
 #include "Location.h"
 
 int scissors_colors[] = {
-	0xFF'FF'FF'FF,
+	0xFF'DD'DD'DD,
 	0xFF'32'32'32
 };
 
@@ -12,13 +12,13 @@ Scissors::~Scissors(){}
 void Scissors::show()
 {
 	visible = true;
-	drawMesh(index, 0, x, y, colors);
+	DrawPolygons(index, 0, x, y, colors);
 } 
 
 void Scissors::hide()
 {
 	visible = false;
-	drawMesh(index, 0, x, y, ConsoleColor);
+	DrawPolygons(index, 0, x, y, ConsoleColor);
 }
 void Scissors::doSomething(int action, Object& obj)
 {

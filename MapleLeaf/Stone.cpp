@@ -13,13 +13,13 @@ Stone::~Stone() {}
 void Stone::show()
 {
 	visible = true;
-	drawMesh(index, 0, x, y, colors);
+	DrawPolygons(index, 0, x, y, colors);
 }
 
 void Stone::hide()
 {
 	visible = false;
-	drawMesh(index, 0, x, y, ConsoleColor);
+	DrawPolygons(index, 0, x, y, ConsoleColor);
 }
 
 void Stone::doSomething(int action, Object& obj)

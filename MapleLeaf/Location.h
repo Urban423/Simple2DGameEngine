@@ -36,11 +36,17 @@ public:
 	void moveTo(float, float);
 };
 
-class Object: public Point
+class IFigure
+{
+public:
+	virtual void show() = 0;
+	virtual void hide() = 0;
+};
+
+class Object: public Point, public IFigure
 {
 public:
 	int index = 0;
-	bool drawCountor = 1;
 	unsigned char up    = KeyCode_UpArrrow;
 	unsigned char down  = KeyCode_DownArrow;
 	unsigned char left  = KeyCode_LeftArrow;
@@ -54,22 +60,12 @@ public:
 	~Object();
 
 	virtual void doSomething(int action, Object& obj) = 0;
-	void show();
-	void hide();
 	int* getColors();
 	bool getVisibility();
 	void Update();
 };
 
-class ConcreateObjectInterface
-{
-public:
-	virtual void doSomething(int action, Object& obj) = 0;
-	virtual void show() = 0;
-	virtual void hide() = 0;
-};
-
-class MapleLeaf: public Object, public ConcreateObjectInterface
+class MapleLeaf: public Object
 {
 public:
 	MapleLeaf();
@@ -91,7 +87,7 @@ public:
 	void hide();
 };
 
-class Stone : public Object, public ConcreateObjectInterface
+class Stone : public Object
 {
 public:
 	Stone();
@@ -102,7 +98,7 @@ public:
 	void hide();
 };
 
-class DuctTape : public Object, public ConcreateObjectInterface
+class DuctTape : public Object
 {
 public:
 	DuctTape();
@@ -113,7 +109,7 @@ public:
 	void doSomething(int action, Object& obj);
 };
 
-class Knife: public Object, public ConcreateObjectInterface
+class Knife: public Object
 {
 protected:
 	float sharp = 1.3;

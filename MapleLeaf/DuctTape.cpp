@@ -14,13 +14,13 @@ DuctTape::~DuctTape() {}
 void DuctTape::show()
 {
 	visible = true;
-	drawMesh(index, 0, x, y, colors);
+	DrawPolygons(index, 0, x, y, colors);
 }
 
 void DuctTape::hide()
 {
 	visible = false;
-	drawMesh(index, 0, x, y, ConsoleColor);
+	DrawPolygons(index, 0, x, y, ConsoleColor);
 }
 
 void DuctTape::doSomething(int action, Object& obj){}

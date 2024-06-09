@@ -19,13 +19,13 @@ void MapleLeafBroken::doSomething(int action, Object& obj){}
 void MapleLeafBroken::show()
 {
 	visible = true;
-	drawMesh(index, 0, x, y, colors);
+	DrawPolygons(index, 0, x, y, colors);
 }
 
 void MapleLeafBroken::hide()
 {
 	visible = false;
-	drawMesh(index, 0, x, y, ConsoleColor);
+	DrawPolygons(index, 0, x, y, ConsoleColor);
 }
 
 
@@ -37,13 +37,13 @@ MapleLeaf::~MapleLeaf() {}
 void MapleLeaf::show()
 {
 	visible = true;
-	drawMesh(index, 0, x, y, colors);
+	DrawPolygons(index, 0, x, y, colors);
 }
 
 void MapleLeaf::hide()
 {
 	visible = false;
-	drawMesh(index, 0, x, y, ConsoleColor);
+	DrawPolygons(index, 0, x, y, ConsoleColor);
 }
 
 void MapleLeaf::doSomething(int action, Object& obj)

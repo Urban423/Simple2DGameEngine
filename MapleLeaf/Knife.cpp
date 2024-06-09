@@ -18,13 +18,13 @@ Knife::~Knife() {}
 void Knife::show()
 {
 	visible = true;
-	drawMesh(index, 1.1, x, y, colors);
+	DrawPolygons(index, 1.1, x, y, colors);
 }
 
 void Knife::hide()
 {
 	visible = false;
-	drawMesh(index, 1.1, x, y, ConsoleColor);
+	DrawPolygons(index, 1.1, x, y, ConsoleColor);
 }
 
 void Knife::doSomething(int action, Object& obj)

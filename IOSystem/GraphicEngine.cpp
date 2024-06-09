@@ -22,7 +22,7 @@ void drawPixel(int x, int y, int color)
 	Image[y * _width + x] = color;
 }
 
-void drawMesh(int mesh_index, float rot, float x, float y, int* colors)
+void DrawPolygons(int mesh_index, float rot, float x, float y, int* colors)
 {
 	if (colors == ConsoleColor) { return; }
 	Matrix4x4 pos, temp;

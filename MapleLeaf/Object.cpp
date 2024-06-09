@@ -4,18 +4,6 @@ Object::Object(){}
 
 Object::~Object(){}
 
-void Object::show()
-{
-	drawMesh(index, 1.1, x, y, colors); 
-	visible = true;
-}
-
-void Object::hide()
-{
-	drawMesh(index, 1.1, x, y, ConsoleColor);
-	visible = false;
-}
-
 int* Object::getColors() { return colors; }
 
 bool Object::getVisibility(){return visible;}
